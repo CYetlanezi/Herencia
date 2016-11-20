@@ -1,0 +1,63 @@
+110362
+18
+Monserrat Arguelles
+Alumno
+Actuaria
+8
+5
+150215
+20
+Andre Villafane
+Alumno
+Administracion
+9
+7
+167124
+22
+Claudia Meneses
+Alumno
+Matematicas
+7
+2
+132187
+19
+Monica Landeros
+Alumno
+Contabilidad
+8
+6
+115298
+21
+Geovani Salvador 
+Alumno
+Derecho
+7
+9
+107528
+30
+Pedro Trejo
+Profesor
+Estadistica
+25789
+8
+152378
+67
+Silvano Espindola
+Profesor
+Economia
+45534
+35
+147207
+66
+Ramon Espinosa
+Profesor
+Matematicas
+23420
+35
+140958
+34
+Leticia Renteria
+Profesor
+Computacion
+30562
+15
