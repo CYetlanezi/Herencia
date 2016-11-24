@@ -1,13 +1,5 @@
- /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+import escuela_h2.Persona;
 
-/**
- *
- * @author marguellc
- */
 public class Alumno extends Persona{
     private int prom;
     private int semestre;
@@ -34,7 +26,7 @@ public class Alumno extends Persona{
 
     @Override
     public String toString() {
-        return "Alumno{" +"Clave: "+getClave()+"Edad: "+getEdad()+"nombre: "+getNombre()+"prom=" + prom + ", semestre=" + semestre + ", carrera=" + carrera + '}';
+        return "Alumno{" +"Clave: "+getClave()+"Edad: "+edad+"nombre: "+nombre+"prom=" + prom + ", semestre=" + semestre + ", carrera=" + carrera + '}';
     }
     
     

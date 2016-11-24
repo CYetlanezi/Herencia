@@ -1,13 +1,9 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
-/**
- *
- * @author marguellc
- */
+import java.awt.Image;
+import javax.swing.Icon;
+import javax.swing.ImageIcon;
+
+
 public class frmPantallaPrincipal extends javax.swing.JFrame {
 
     /**
@@ -15,6 +11,9 @@ public class frmPantallaPrincipal extends javax.swing.JFrame {
      */
     public frmPantallaPrincipal() {
         initComponents();
+        setLocationRelativeTo(null);
+        setTitle("Ejercicio Herencia");
+      
     }
 
     /**
@@ -29,9 +28,14 @@ public class frmPantallaPrincipal extends javax.swing.JFrame {
         btnAlumnos = new javax.swing.JButton();
         btnProfes = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(255, 255, 255));
 
+        btnAlumnos.setBackground(new java.awt.Color(0, 102, 51));
+        btnAlumnos.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnAlumnos.setForeground(new java.awt.Color(255, 255, 255));
         btnAlumnos.setText("Alumnos");
         btnAlumnos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -39,6 +43,9 @@ public class frmPantallaPrincipal extends javax.swing.JFrame {
             }
         });
 
+        btnProfes.setBackground(new java.awt.Color(0, 102, 51));
+        btnProfes.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnProfes.setForeground(new java.awt.Color(255, 255, 255));
         btnProfes.setText("Profesores");
         btnProfes.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -46,33 +53,41 @@ public class frmPantallaPrincipal extends javax.swing.JFrame {
             }
         });
 
+        jLabel1.setFont(new java.awt.Font("Vivaldi", 1, 48)); // NOI18N
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Bienvenidos");
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/logoITAM.jpg"))); // NOI18N
+        jLabel2.setText(" ");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
-                .addGap(27, 27, 27)
-                .addComponent(btnAlumnos)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 132, Short.MAX_VALUE)
-                .addComponent(btnProfes)
-                .addGap(83, 83, 83))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(121, 121, 121)
-                .addComponent(jLabel1)
+                .addGap(89, 89, 89)
+                .addComponent(jLabel2)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(23, 23, 23)
+                .addComponent(btnAlumnos, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 47, Short.MAX_VALUE)
+                .addComponent(btnProfes, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(26, 26, 26))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(35, 35, 35)
+                .addContainerGap()
                 .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 173, Short.MAX_VALUE)
+                .addGap(26, 26, 26)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnAlumnos)
                     .addComponent(btnProfes))
-                .addGap(55, 55, 55))
+                .addGap(38, 38, 38))
         );
 
         pack();
@@ -80,10 +95,13 @@ public class frmPantallaPrincipal extends javax.swing.JFrame {
 
     private void btnAlumnosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAlumnosActionPerformed
         new frmAlumnos().setVisible(true);
+        this.setVisible(false);
+        
     }//GEN-LAST:event_btnAlumnosActionPerformed
 
     private void btnProfesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProfesActionPerformed
         new frmProfes().setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_btnProfesActionPerformed
 
     /**
@@ -125,5 +143,10 @@ public class frmPantallaPrincipal extends javax.swing.JFrame {
     private javax.swing.JButton btnAlumnos;
     private javax.swing.JButton btnProfes;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     // End of variables declaration//GEN-END:variables
+
+    private ImageIcon newImageIcon(String logoITAMjpg) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }
